@@ -1,0 +1,370 @@
+
+
+html{
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica";
+    background-color: #f0e9ee;        /* body color */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url("../img/jumbo.jpeg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+*{
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+header{
+    background-color: #0000005b;        /* header color */
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    color: #f0e9ee;
+    box-shadow: #ffffff1f 0 0 10px 1px;
+}
+
+div.logo{
+    padding: 10px 25px 0 10vw;
+    flex-grow: 1;
+    z-index: 999;
+}
+
+nav li.menu-bars{
+    display: none;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    padding-right: 10vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-ul li{
+    margin: 0;
+    text-align: center;
+    list-style: none;
+    height: 100%;
+    width: 150px;
+    align-items: center;
+}
+
+li.current{
+    border-bottom: 2px solid #fa4e4e;
+}
+
+.nav-ul a{
+    padding: 30px 0;
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;                           /* nav link color*/
+}
+
+li.menu-bars ul.menu-ul{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        text-align: right;
+        height: auto;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        padding-top: 15px;
+        text-align: center;
+        display: none;
+}
+
+li.menu-link{
+    background-color: #0000005b;
+    width: 100%;
+    text-align: right;
+    position: relative;
+}
+
+li.menu-link a{
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.nav-ul li:not(.current):hover {
+    background-color: #ffffff1f;                /* hover color */
+}
+
+.nav-u l li a:hover{
+    color: #172035;
+}
+
+button a{
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding-top: 20%;
+    cursor: pointer;
+    color: white;                           /* buttons link color */
+}
+
+a {
+    display: inline-block;
+    color: inherit;
+}
+
+input , button.submit{
+    height: 50px;
+    border: 2px #f0e9ee solid;            /* email box border color */
+}
+
+input{
+    border-radius: 8px;
+    width: 80%;
+    padding-left: 5vw;
+}
+
+button.submit{
+    border-radius: 8px;
+    width: 20%;
+}
+
+button.info{
+    width: 70px;
+    height: 40px;
+    background-color: #122b3e;            /* button background ccolor*/
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+}
+
+button.info:hover{
+    border: 2px white solid;
+    background: transparent;
+}
+
+
+div.body{
+    margin-top: 80px;
+    flex-grow: 1;
+}
+
+
+div.email-me{
+    padding:10vh 10vw;
+    text-align: center;
+    min-height: 90vh;
+    line-height: 100px;
+    padding-top: 25vh;
+    background-color: #122b3e;
+    color: #f0e9ee;                       /* email section color */
+}
+
+div.email-me h1 {
+    font-size: 48px;
+}
+
+.email-me input{
+    border-radius: 8px 0 0 8px;
+}
+
+.email-me button{
+    background-color: #122b3e;           /* email me button color*/
+    color: #f0e9ee;
+    cursor: pointer;
+    border-radius: 0 8px 8px 0;
+}
+
+footer{
+    background-color: #172035;             /* footer color */
+    text-align: center;
+    font-weight: bold;
+    color: #f0e9ee;
+    padding: 10px 15px;
+    font-size: 14px;
+}
+
+.greetings{
+    padding:45vh 10vw 0;
+    grid-template-columns: 1fr;
+    text-align: center;
+    min-height: calc( 100vh - 80px);
+    max-height: auto;
+    margin-bottom: 20px;
+    color: white;
+}
+
+
+
+.error{
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    padding: 100px 10vw;
+}
+
+
+
+@media screen and (max-width: 768px){
+    nav ul li.nav-link{
+        display: none;
+    }
+
+    nav ul{
+        padding-right: 5vw;
+        padding-top: 10px;
+    }
+
+    nav ul li.menu-bars{
+        display: block;
+        height: 60px;
+        width: 60px;
+        font-size: 40px;
+        cursor: pointer;
+        color: white;
+    }
+
+    li.menu-bars:hover{
+        color: #172035;
+    }
+
+    nav ul li:hover ul.menu-ul{
+        display: block;
+    }
+
+    nav ul li:hover ul li{
+        display: block;
+    }
+
+    ul.menu-ul li:first-child{
+        border-top: 0.5px solid white;
+    }
+
+    .email-form{
+        line-height: 0px;
+    }
+
+    .email-me button{
+        width: 100%;
+        border-radius: 0 0 8px 8px;
+    }
+
+    .email-me input{
+        width: 100%;
+        border-radius: 8px 8px 0 0;
+    }
+}
+
+
+
+/* contact form style */
+div.contact-form{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 100px 10vw;
+    grid-gap: 10vw;
+    color: white;
+}
+
+form{
+    line-height: 30px;
+}
+
+form input , .input{
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.one-third{
+    padding: 0;
+    margin: 0;
+    
+}
+
+.two-third{
+    padding: 0;
+    margin: 0;
+}
+
+input.message{
+    height: 400px;
+    min-height: 100px; 
+}
+
+p full{
+    grid-column: 1fr;
+}
+
+.alert{
+    text-align: center;
+    padding:10px;
+    background:#79c879;
+    color:#fff;
+    margin-bottom:10px;
+    display:none;
+  }  
+
+form button.submit{
+    margin: 50px 0 0 0;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #172035;
+    color: white;
+}
+
+
+
+/* about section */
+div.about{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 100px 10vw;
+    grid-gap: 10vw;
+    color: white;
+}
+
+@media screen and (max-width: 768px){
+    div.contact-form, div.about{
+        grid-template-columns: 1fr;
+        padding: 0 10vw;
+    }
+}
+
+/* authors page */
+div.authors-bar{
+    width: 100%;
+    color: #172035;
+    background: #79c879;
+    margin: 0;
+    padding: 0;
+    height: 80px;
+}
+
+.authors-bar h2{
+    padding: 20px 0 0 10vw;
+}

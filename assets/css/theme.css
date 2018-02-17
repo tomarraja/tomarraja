@@ -1,0 +1,59 @@
+html, body{
+    background-color:
+    color:
+}
+
+header{
+    background-color: ;
+    color: ;
+}
+
+li.current{
+    background-color: ;
+}
+
+nav ul.nav-ul a{
+    color:
+}
+
+ul.nav-ul li:not(.current):hover {
+    background-color: ;
+}
+
+button a{
+    color: ;
+}
+
+input{
+    background-color: ;
+    color: ;
+}
+
+button.info{
+    background-color: ;
+    color: ;
+}
+
+div.email-me{
+    background-color: ;
+    color: ;
+}
+
+footer{
+    background-color: ;
+    color: ;
+}
+
+.greetings{
+    background-color: ;
+    color: ;
+}
+
+.error{
+    color: ;
+}
+
+form button.submit{
+    background-color: ;
+    color: ;
+}
